@@ -69,3 +69,18 @@ def descending_order(num):
     return int("".join(sort))
 
 print (descending_order(1257894521))
+
+
+# break number into digits
+# multiply those digits by each other
+# repeat until there is only 1 digit
+
+def persistence(n):
+    result = 0
+    for digits in n:
+        if digits == 1:
+            result += 1
+
+    return result
+
+print (persistence(999))
