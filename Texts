@@ -1,0 +1,49 @@
+### Decimal to binary
+
+Write a command-line program which prompts the user for a series of decimal integer values separated by spaces. Display each decimal integer along with its equivalent binary value.
+
+```
+Please enter in a series of decimal values (separated by spaces): 460 8218 1 31313 987654321
+
+460 in binary is 111001100
+8218 in binary is 10000000011010
+1 in binary is 1
+31313 in binary is 111101001010001
+987654321 in binary is 111010110111100110100010110001
+```
+
+You can convert a decimal number to its binary equivalent by repeatedly dividing the number by two. Prepend the remainder of this division (either a 0 or a 1) to the solution string (see the Tips and Tricks section to learn how to *prepend* a value to a string). The process ends when division of the value by two yields a zero.
+
+For example, convert 8 to its binary equivalent of "1000":
+
+![Image version of conversion table](img/ConvertBinary.png)
+
+| **Value** | **Value / 2** | **Remainder** | **Solution String** |
+|:---------:|:-------------:|:-------------:|:-------------------:|
+|     8     |       4       |       0       |         "0"         |
+|     4     |       2       |       0       |        "00"         |
+|     2     |       1       |       0       |       "000"         |
+|     1     |       0       |       1       |    **"1000"**       |
+
+
+Try repeating the process yourself to convert 19 to "10011", its binary equivalent.
+
+| **Value** | **Value / 2** | **Remainder** | **Solution String** |
+|:---------:|:-------------:|:-------------:|:-------------------:|
+|     19    |               |               |                     |
+|           |               |               |                     |
+|           |               |               |                     |
+|           |               |               |                     |
+|           |               |               |   **"10011"**       |
+
+
+
+
+Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
+
+Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+
+Example:
+
+Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
