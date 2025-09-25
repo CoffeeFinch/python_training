@@ -3,6 +3,8 @@
 # if letter.isupper = aeiou
 # increase count by 1
 # return count
+from operator import truediv
+
 
 def get_count(sentence):
      vowel_count = 0
@@ -75,12 +77,57 @@ print (descending_order(1257894521))
 # multiply those digits by each other
 # repeat until there is only 1 digit
 
-def persistence(n):
-    result = 0
-    for digits in n:
-        if digits == 1:
-            result += 1
+# def persistence(n):
+#     result = 0
+#     for digits in n:
+#         if digits == 1:
+#             result += 1
+#
+#     return result
+
+# print (persistence(999))
+
+
+def square_digits(num):
+    result = ""
+    result2 = ""
+    nums = str(num)
+    for digit in nums:
+        result += digit
+
+    for dig in result:
+        result2 += str(int(dig) * int(dig))
+
+    return int(result2)
+
+print (square_digits(9119))
+
+
+# create empty result list
+# create string pair holder
+# Create boolean tracker
+# for each character in the string
+# add it to the pair holder and flip the bool
+# next one, add to the holder, add the holder to the list, clear the holder and flip the bool back
+# if the bool is true, then its the first number
+# if it's false, its the second
+# if the bool is false, end the group and start a new one
+
+def solution(s):
+    result = []
+    holder = ""
+    tracker = True
+    for letter in s:
+        if tracker:
+            holder += letter
+            tracker = False
+        elif not tracker:
+            holder = holder + letter
+            result += holder
+            holder = ""
+            tracker = True
 
     return result
 
-print (persistence(999))
+
+print(solution("abcd"))
