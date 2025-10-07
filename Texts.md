@@ -37,7 +37,7 @@ Try repeating the process yourself to convert 19 to "10011", its binary equivale
 |           |               |               |   **"10011"**       |
 
 
-
+----
 
 Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
 
@@ -49,7 +49,7 @@ Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
 
-
+----
 
 Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
 
@@ -60,7 +60,7 @@ For example (Input --> Output):
 4 --> 0 (because 4 is already a one-digit number, there is no multiplication)
 
 
-
+----
 
 Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
 
@@ -73,7 +73,7 @@ Note: The function accepts an integer and returns an integer.
 Happy Coding!
 
 
-
+----
 
 Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
 
@@ -81,4 +81,60 @@ Examples:
 
 * 'abc' =>  ['ab', 'c_']
 * 'abcdef' => ['ab', 'cd', 'ef']
+
+
+----
+
+
+Trolls are attacking your comment section!
+
+A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+Note: for this kata y isn't considered a vowel.
+
+
+----
+
+Write a function that takes a string of braces, and determines if the order of the braces is valid. It should return true if the string is valid, and false if it's invalid.
+
+This Kata is similar to the Valid Parentheses Kata, but introduces new characters: brackets [], and curly braces {}. Thanks to @arnedag for the idea!
+
+All input strings will be nonempty, and will only consist of parentheses, brackets and curly braces: ()[]{}.
+What is considered Valid?
+
+A string of braces is considered valid if all braces are matched with the correct brace.
+Examples
+
+"(){}[]"   =>  True
+"([{}])"   =>  True
+"(}"       =>  False
+"[(])"     =>  False
+"[({})](]" =>  False
+
+----
+
+Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
+Example 1:
+
+a1 = ["arp", "live", "strong"]
+
+a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+
+returns ["arp", "live", "strong"]
+Example 2:
+
+a1 = ["tarp", "mice", "bull"]
+
+a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+
+returns []
+Notes:
+
+    Arrays are written in "general" notation. See "Your Test Cases" for examples in your language.
+    In Shell bash a1 and a2 are strings. The return is a string where words are separated by commas.
+    Beware: In some languages r must be without duplicates.
 
